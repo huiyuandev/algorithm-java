@@ -22,6 +22,7 @@ public class BubbleSort {
     /**
      * 冒泡排序
      * 时间复杂度为O(n^2)
+     *
      * @param arr 需要排序的数组
      */
     public static void bubbleSort(Comparable[] arr) {
