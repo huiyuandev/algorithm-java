@@ -22,6 +22,7 @@ public class MergeSort {
 
     /**
      * 对数组a中的元素进行排序
+     * 时间复杂度为O(nlogn)
      */
     public static void mergeSort(Comparable[] a) {
         // 1.初始化辅助数组assist；
