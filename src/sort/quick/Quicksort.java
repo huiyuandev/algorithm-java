@@ -5,14 +5,14 @@ import java.util.Arrays;
 import static sort.common.CommonUtils.lesser;
 import static sort.common.CommonUtils.swap;
 
-public class QuickSort {
+public class Quicksort {
 
     public static void main(String[] args) {
         Integer[] arr = {6, 1, 2, 7, 9, 3, 4, 5, 8};
         System.out.println("原数组:");
         System.out.println(Arrays.toString(arr));
 
-        quickSort(arr);
+        quicksort(arr);
 
         System.out.println("排序后数组:");
         System.out.println(Arrays.toString(arr));
@@ -22,14 +22,14 @@ public class QuickSort {
      * 对数组内的元素进行排序
      * 平均时间复杂度为O(nlogn)
      */
-    public static void quickSort(Comparable[] a) {
+    public static void quicksort(Comparable[] a) {
         int lo = 0;
         int hi = a.length - 1;
-        quickSort(a, lo, hi);
+        quicksort(a, lo, hi);
     }
 
     // 对数组a中从索引lo到索引hi之间的元素进行排序
-    private static void quickSort(Comparable[] a, int lo, int hi) {
+    private static void quicksort(Comparable[] a, int lo, int hi) {
         // 安全性校验
         if (hi <= lo) {
             return;
@@ -39,10 +39,10 @@ public class QuickSort {
         int partition = partition(a, lo, hi);//返回的是分组的分界值所在的索引，分界值位置变换后的索引
 
         // 让左子组有序
-        quickSort(a, lo, partition - 1);
+        quicksort(a, lo, partition - 1);
 
         // 让右子组有序
-        quickSort(a, partition + 1, hi);
+        quicksort(a, partition + 1, hi);
     }
 
     //对数组a中，从索引 lo到索引 hi之间的元素进行分组，并返回分组界限对应的索引
